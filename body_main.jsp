@@ -1,5 +1,5 @@
 <%@ page contentType = "text/html;charset=utf-8" %>
-<%! String greeting = "Welcome to Web Shopping Mall";
+<%! String greeting = "환영합니다!";
       String tagline = "Welcome to Web Market!";%>
 	<div class="jumbotron">
 		<div class="container">
