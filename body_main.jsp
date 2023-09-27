@@ -1,12 +1,43 @@
-<%@ page contentType = "text/html;charset=utf-8" %>
-<%! String greeting = "환영합니다!";
+<%@ page contentType="text/html; charset=utf-8"%>
+<%@ page import="java.util.ArrayList"%>
+<%@ page import="dto.Product"%>
+<jsp:useBean id="productDAO" class="dao.ProductRepository" scope="session" />
+<%
+	ArrayList<Product> listOfProducts = productDAO.getAllProducts(); // 리스트에 상품 전체 정보를 얻어온다.
+%> 
+<%! String greeting = "환영합니다! 어서오세요!";
       String tagline = "Welcome to Web Market!";%>
-	<div class="jumbotron">
+<div class="jumbotron">
 		<div class="container">
 			<h1 class="display-3">
 				<%=greeting%>
 			</h1>
 		</div>
+	</div>
+    <div class="container">
+		<div class="row" align="center">
+			<%
+				for (int i = 0; i < listOfProducts.size(); i++) {
+					Product product = listOfProducts.get(i);
+			%>
+			<div class="col-md-4">
+                <div class="card bg-dark text-white">
+                        <img src="image/<%=product.getProductId()%>.jpg" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                        <h5 class="card-title">신발이미지 샘플</h5>
+                        <p class="card-text">출처 : 나이키</p>
+                        </div>
+                        </div>
+
+				<h3><%=product.getPname()%></h3>
+				<p><%=product.getDescription()%>
+				<p><%=product.getUnitPrice()%>원
+			</div>
+			<%
+				}
+			%>
+		</div>
+		<hr>
 	</div>	
 	<div class="card bg-dark text-white">
     <img src="image/nike product2.jpg" class="card-img" alt="...">
