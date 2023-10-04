@@ -21,7 +21,7 @@
 					Product product = listOfProducts.get(i);
 			%>
 			<div class="col-md-4">
-                <div class="card bg-dark text-white">
+                <div class="card bg-dark text-black">
                         <img src="image/<%=product.getProductId()%>.jpg" class="card-img" alt="...">
                         <div class="card-img-overlay">
                         <h5 class="card-title">신발이미지 샘플</h5>
@@ -32,6 +32,8 @@
 				<h3><%=product.getPname()%></h3>
 				<p><%=product.getDescription()%>
 				<p><%=product.getUnitPrice()%>원
+                <p><a href="product_detail.jsp?id=<%=product.getProductId()%>" class="btn btn-secondary" role="button"> 상품 상세 정보 &raquo;</a>
+
 			</div>
 			<%
 				}
