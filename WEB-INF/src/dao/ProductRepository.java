@@ -3,9 +3,12 @@ import java.util.ArrayList;
 import dto.Product;
 
 public class ProductRepository {
+   private ArrayList<Product> listOfProducts = new ArrayList<Product>();
+   private static ProductRepository instance = new ProductRepository();
 
-	private ArrayList<Product> listOfProducts = new ArrayList<Product>(); // ArrayList를 Product로 캐스팅
-
+   public static ProductRepository getInstance(){
+	return instance;
+   }
 	public ProductRepository() {
 		Product phone = new Product("P1234","CORTEZ", 800000);
 		phone.setDescription("나이키 코르테즈는 1972년 나이키 공동 창업자인 빌 바워만이 당시 그 어떤 신발보다 가볍고 편안하게 디자인한 신발입니다. 코르테즈는 순식간에 미국에서 가장 인기 있는 러닝화가 되었고, 대중문화 역사에 새겨진 확실한 아이콘으로 변모했습니다.");
@@ -33,13 +36,10 @@ public class ProductRepository {
 		listOfProducts.add(phone);
 		listOfProducts.add(notebook);
 		listOfProducts.add(tablet);
-
 	}
-    
     	public ArrayList<Product> getAllProducts() {
 		return listOfProducts;
 	}
-
 public Product getProductById(String productId) {
 		Product productById = null;
 
@@ -52,4 +52,7 @@ public Product getProductById(String productId) {
 		}
 		return productById;
 	}
+    public void addProduct(Product product) {
+        listOfProducts.add(product);
+       }
 }
