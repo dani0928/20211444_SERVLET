@@ -37,7 +37,7 @@
 				<h4><%=product.getUnitPrice()%>원</h4>
 
 <div class="card bg-dark text-black">
-                        <img src="image/<%=product.getProductId()%>.jpg" class="card-img" alt="...">
+                        <img src="image/<%=product.getFilename()%>" class="card-img" alt="...">
                     <div class="card-img-overlay">
                     <h5 class="card-title">신발이미지 샘플</h5>
                     <p class="card-text">출처 : 나이키</p>
