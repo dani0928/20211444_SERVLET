@@ -1,4 +1,6 @@
 <%@ page contentType = "text/html; charset=utf-8" %>
+<%@ page import="java.util.Date"%>
+
 
 <footer class="container">
     <p>&copy; 쇼핑몰 대표 : 박진혁, 고유번호 : 20211444, 연락처 : dani0928@sungkyul.ac.kr

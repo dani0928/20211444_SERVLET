@@ -25,6 +25,7 @@
             <a class="navbar-brand" href="product_add.jsp">등록</a>
             <a class="navbar-brand" href="index_ad.jsp">수정/삭제</a>
             <a class="navbar-brand" href="../index.jsp">일반모드</a>
+          <a href="../login/logout.jsp" class="btn btn-sm btn-success pull-right">로그아웃</a>
       </div>
    </div>
 </nav>
