@@ -4,13 +4,16 @@
 <%@ page import="com.oreilly.servlet.*"%>
 <%@ page import="com.oreilly.servlet.multipart.*"%>
 <%@ page import="java.util.Enumeration" %>
+<%@ page import="java.sql.*"%>
+<%@ include file="../db/db_conn.jsp" %>
+
 
 
 <%
 	request.setCharacterEncoding("UTF-8");
 
     String filename = "";
-	String realFolder = request.getServletContext().getRealPath("image/product"); //웹 어플리케이션상의 절대 경로
+	String realFolder = request.getServletContext().getRealPath("image"); //웹 어플리케이션상의 절대 경로
 	String encType = "utf-8"; //인코딩 타입
 	int maxSize = 5 * 1024 * 1024; //최대 업로드될 파일의 크기5Mb
 
@@ -21,7 +24,7 @@
 	String name = request.getParameter("name");
 	String unitPrice = request.getParameter("unitPrice");
 	String description = request.getParameter("description");
-	String manufacturer = request.getParameter("manufacturer");
+	//String manufacturer = request.getParameter("manufacturer");
 	String category = request.getParameter("category");
 	String unitsInStock = request.getParameter("unitsInStock");
 	String condition = request.getParameter("condition");
@@ -47,7 +50,7 @@
 	newProduct.setPname(name);
 	newProduct.setUnitPrice(price);
 	newProduct.setDescription(description);
-	newProduct.setManufacturer(manufacturer);
+	//newProduct.setManufacturer(manufacturer);
 	newProduct.setCategory(category);
 	newProduct.setUnitsInStock(stock);
 	newProduct.setCondition(condition);
