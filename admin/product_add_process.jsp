@@ -11,7 +11,7 @@
 
 <%
 	request.setCharacterEncoding("UTF-8");
-
+    
     String filename = "";
 	String realFolder = request.getServletContext().getRealPath("image"); //웹 어플리케이션상의 절대 경로
 	String encType = "utf-8"; //인코딩 타입

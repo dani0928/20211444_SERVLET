@@ -3,7 +3,7 @@
 <%@ page import="dto.Product"%>
 <%@ page import="java.sql.*"%>
 <%@ include file="db/db_conn.jsp"%>
-<jsp:useBean id="productDAO" class="dao.ProductRepository" scope="session" />
+
 <%
 	//ArrayList<Product> listOfProducts = productDAO.getAllProducts(); // 리스트에 상품 전체 정보를 얻어온다.
 %> 
