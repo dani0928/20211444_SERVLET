@@ -46,7 +46,7 @@
 		<hr>
 	</div>	
 	<div class="card bg-dark text-white">
-    <img src="image/nike product2.jpg" class="card-img" alt="...">
+    <img src="../image/nike product2.jpg" class="card-img" alt="...">
     <div class="card-img-overlay">
     <h5 class="card-title">나이키 이벤트</h5>
     <p class="card-text">출처 : Pinterest</p>

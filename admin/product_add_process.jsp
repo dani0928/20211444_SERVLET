@@ -31,17 +31,17 @@
 
 	Integer price;
 
-	if (unitPrice.isEmpty())
-		price = 0;
-	else
-		price = Integer.valueOf(unitPrice);
+if (unitPrice == null || unitPrice.isEmpty())
+    price = 0;
+else
+    price = Integer.valueOf(unitPrice);
 
 	long stock;
 
-	if (unitsInStock.isEmpty())
-		stock = 0;
-	else
-		stock = Long.valueOf(unitsInStock);
+if (unitsInStock == null || unitsInStock.isEmpty())
+    stock = 0;
+else
+    stock = Long.valueOf(unitsInStock);
 
 	ProductRepository dao = ProductRepository.getInstance();
 

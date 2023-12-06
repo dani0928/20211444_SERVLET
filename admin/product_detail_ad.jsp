@@ -23,7 +23,7 @@
 <title>상품 상세 정보</title>
 </head>
 <body>
-    	<%@ include file="top_banner_ad.jsp" %>
+    <%@ include file="top_banner_ad.jsp" %>
 	<%@ include file="top_menu_ad.jsp" %>
 	<div class="jumbotron">
 		<div class="container">
@@ -53,7 +53,7 @@
 	</form>
 
 <div class="card bg-dark text-black">
-                        <img src="image/<%=product.getFilename()%>" class="card-img" alt="...">
+                        <img src="../image/<%=product.getFilename()%>" class="card-img" alt="...">
                     <div class="card-img-overlay">
                     <h5 class="card-title">신발이미지 샘플</h5>
                     <p class="card-text">출처 : 나이키</p>

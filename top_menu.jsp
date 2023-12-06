@@ -14,7 +14,7 @@
    </div>
     
     <div>
-        <img src="image\nike.gif" class="img-fluid" alt="...">
+        <img src="../image/nike.gif" class="img-fluid" alt="...">
     </div>
     
    <div class="container">

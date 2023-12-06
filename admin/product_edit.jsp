@@ -42,7 +42,7 @@
 		%>
 		<div class="col-md-4">
 
-   		<img src="../image/product/<%=rs.getString("p_fileName")%>" class="card-img" alt="...">
+   		<img src="../image/<%=rs.getString("p_fileName")%>" class="card-img" alt="...">
 		<h3><%=rs.getString("p_name")%></h3>
 		<p><%=rs.getString("p_description")%>
 		<p><%=rs.getString("p_UnitPrice")%>원
